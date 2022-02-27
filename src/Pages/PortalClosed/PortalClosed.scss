@@ -6,6 +6,34 @@
   }
   aside {
     background: #000;
+    &.mobile_aside {
+      color: white;
+      text-transform: uppercase;
+      z-index: 2;
+      .aside_title {
+        border: 5px solid black;
+        font-size: 20px;
+        padding: 0.75rem 0 0.75rem 0;
+        background: white;
+        color: black;
+        &.active_title {
+          background: #7217f4;
+          color: white;
+        }
+      }
+      .dropdown-toggle:after {
+        display: none;
+      }
+      li {
+        border-bottom: 5px solid black;
+        &:first-child {
+          border-top: 5px solid black;
+        }
+      }
+      .dropdown-menu {
+        margin-top: 10px !important;
+      }
+    }
     .box_title {
       color: #fff;
     }
@@ -39,6 +67,9 @@
   }
   .content_right_side {
     padding-left: 1.5rem;
+    @media (max-width: 767px) {
+      padding-left: 0px;
+    }
     .content_wrapper {
       background: white;
     }
@@ -48,6 +79,12 @@
     .tabItemWrapper {
       background: white;
       border: 5px solid black;
+      .result_list {
+        @media (max-width: 767px) {
+          width: 100%;
+          border-bottom: 5px solid black;
+        }
+      }
       li {
         font-size: 2.4rem;
         // padding: 0.4rem;
@@ -75,10 +112,11 @@
         }
         .dropdown-menu {
           transform: translate(0, 0) !important;
-          top: 5.2rem !important;
-          width: 100%;
+          top: 4.2rem !important;
+          width: 104%;
           border-radius: 0px;
           border: 5px solid black;
+          left: -5px !important;
           li {
             padding: 0px;
             border-radius: 0px !important;
@@ -109,9 +147,15 @@
       .col_header {
         font-size: 3.6rem;
         border-bottom: solid 2px var(--col-text);
+        @media (max-width: 767px) {
+          font-size: 24px;
+        }
         h3 {
           font-weight: bold;
           font-size: 3.6rem;
+          @media (max-width: 767px) {
+            font-size: 24px;
+          }
         }
       }
       .tabContentLink {

@@ -9,6 +9,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <div className="container">
+          
           <Routes>
             <Route path="/" element={<PortalClosed></PortalClosed>}></Route>
             <Route

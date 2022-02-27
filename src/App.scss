@@ -146,16 +146,18 @@ body {
 /// ...........................Global Settings. .......................End
 // ................ custom breakpoints................
 
-@media screen and (max-width: 991px) {
-  .container {
-    max-width: 991px;
-  }
-}
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 991px;
+  }
+}
+
 
 @media (min-width: 1024px) {
   .container {

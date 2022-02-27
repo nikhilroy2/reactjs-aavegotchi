@@ -8,6 +8,41 @@
   background: #000;
 }
 
+#PortalClosed aside.mobile_aside {
+  color: white;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+#PortalClosed aside.mobile_aside .aside_title {
+  border: 5px solid black;
+  font-size: 20px;
+  padding: 0.75rem 0 0.75rem 0;
+  background: white;
+  color: black;
+}
+
+#PortalClosed aside.mobile_aside .aside_title.active_title {
+  background: #7217f4;
+  color: white;
+}
+
+#PortalClosed aside.mobile_aside .dropdown-toggle:after {
+  display: none;
+}
+
+#PortalClosed aside.mobile_aside li {
+  border-bottom: 5px solid black;
+}
+
+#PortalClosed aside.mobile_aside li:first-child {
+  border-top: 5px solid black;
+}
+
+#PortalClosed aside.mobile_aside .dropdown-menu {
+  margin-top: 10px !important;
+}
+
 #PortalClosed aside .box_title {
   color: #fff;
 }
@@ -49,6 +84,12 @@
   padding-left: 1.5rem;
 }
 
+@media (max-width: 767px) {
+  #PortalClosed .content_right_side {
+    padding-left: 0px;
+  }
+}
+
 #PortalClosed .content_right_side .content_wrapper {
   background: white;
 }
@@ -60,6 +101,13 @@
 #PortalClosed #portalClosedContent .tabItemWrapper {
   background: white;
   border: 5px solid black;
+}
+
+@media (max-width: 767px) {
+  #PortalClosed #portalClosedContent .tabItemWrapper .result_list {
+    width: 100%;
+    border-bottom: 5px solid black;
+  }
 }
 
 #PortalClosed #portalClosedContent .tabItemWrapper li {
@@ -96,10 +144,11 @@
 #PortalClosed #portalClosedContent .tabItemWrapper .list_dropdown .dropdown-menu {
   -webkit-transform: translate(0, 0) !important;
           transform: translate(0, 0) !important;
-  top: 5.2rem !important;
-  width: 100%;
+  top: 4.2rem !important;
+  width: 104%;
   border-radius: 0px;
   border: 5px solid black;
+  left: -5px !important;
 }
 
 #PortalClosed #portalClosedContent .tabItemWrapper .list_dropdown .dropdown-menu li {
@@ -138,9 +187,21 @@
   border-bottom: solid 2px var(--col-text);
 }
 
+@media (max-width: 767px) {
+  #PortalClosed #portalClosedContent .tabItemContent .col_header {
+    font-size: 24px;
+  }
+}
+
 #PortalClosed #portalClosedContent .tabItemContent .col_header h3 {
   font-weight: bold;
   font-size: 3.6rem;
+}
+
+@media (max-width: 767px) {
+  #PortalClosed #portalClosedContent .tabItemContent .col_header h3 {
+    font-size: 24px;
+  }
 }
 
 #PortalClosed #portalClosedContent .tabItemContent .tabContentLink {

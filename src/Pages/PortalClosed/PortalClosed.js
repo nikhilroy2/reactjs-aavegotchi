@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./PortalClosed.css";
 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function PortalClosed(props) {
-
-
   return (
     <div id="PortalClosed">
       <div className="row g-0 mt-5">
@@ -73,9 +71,52 @@ export const PortalAside = () => {
       icon_img: "https://aavegotchi.com/images/icons/activity.svg",
     },
   ];
+  const [toggleDropdown, setToggleDropdown] = useState(false)
   return (
     <div className="w-25 col_size_wrapper">
-      <aside className="p-3 position-sticky" style={{ top: "0px" }}>
+
+      {/* for mobile aside */}
+      <aside className="d-md-none position-sticky mobile_aside mb-4" style={{ top: "0px" }}>
+        <div className={`aside_title dropdown ${toggleDropdown && 'active_title'}`}
+        >
+          <div onClick={() => setToggleDropdown(!toggleDropdown)} className="dropdown-toggle d-flex justify-content-evenly w-100" data-mdb-toggle="dropdown">
+            <span>
+              Category:
+            </span>
+            <span>
+              <img
+                style={{ height: "30px", width: "30px" }}
+                src='https://aavegotchi.com/images/portals/h1_closed.svg'
+                alt=""
+              /> PORTALS - OPEN
+            </span>
+          </div>
+          <div className="dropdown-menu w-100">
+            <ul className="list-unstyled aside_link_list">
+              {asideLinkObject.map((v) => {
+                return (
+                  <li key={v.id}>
+                    <a
+                      className={`d-flex align-items-center p-3 ${v.name == "PORTALS - CLOSED" && "active_link"
+                        }`}
+                      href={v.link}
+                    >
+                      <img
+                        style={{ height: "30px", width: "30px" }}
+                        src={v.icon_img}
+                        alt=""
+                      />{" "}
+                      {v.name}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </aside>
+      {/* for desktop aside */}
+      <aside className="d-none d-md-block p-3 position-sticky" style={{ top: "0px" }}>
         <h3 className="box_title text-center">Collections</h3>
         <ul className="list-unstyled aside_link_list">
           {asideLinkObject.map((v) => {
@@ -116,11 +157,11 @@ const PortalClosedContent = () => {
   return (
     <div id="portalClosedContent">
       <ul
-        className="list-unstyled d-flex tabItemWrapper mb-0 position-sticky"
+        className="list-unstyled d-flex tabItemWrapper mb-0 position-sticky flex-wrap flex-md-nowrap"
         style={{ top: "0px" }}
       >
-        <li>PORTALS-CLOSED</li>
-        <li>50 RESULTS</li>
+        <li className="d-none d-md-block">PORTALS-CLOSED</li>
+        <li className="result_list">50 RESULTS</li>
 
         <li className="list_dropdown dropdown">
           <button
@@ -206,13 +247,13 @@ const PortalClosedContent = () => {
               return (
                 <li key={v.id}>
 
-                  <Link  className="d-block tabContentLink" to={{
+                  <Link className="d-block tabContentLink" to={{
                     pathname: '/portalitems',
                     search: `portal=${v.id}`
                   }}>
                     <div className="row">
                       <div className="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
-                        <img
+                        <img style={{maxHeight: '180px'}} className="d-block mx-auto"
                           src={
                             require("../../Static/img/icon_img/h2_closed_img.svg").default
                           }
@@ -245,7 +286,7 @@ const PortalClosedContent = () => {
                           <div className="col_body">
                             <ul className="list-unstyled">
                               <li className="text-uppercase">
-                                Haunt: {v.haunt}
+                                Haunt: {v.Haunt}
                               </li>
                               <li className="text-uppercase">
                                 {v.never_sold}
@@ -259,7 +300,7 @@ const PortalClosedContent = () => {
                       </div>
                     </div>
                   </Link>
-                  
+
                 </li>
               );
             })}
