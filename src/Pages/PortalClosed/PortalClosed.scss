@@ -1,0 +1,44 @@
+#PortalClosed {
+    .col_size_wrapper{
+        @media (max-width: 767px){
+            width: 100%!important;
+        }
+    }
+  aside {
+    background: #000;
+    .box_title {
+      color: #fff;
+    }
+    img {
+      object-fit: contain;
+    }
+    .aside_link_list {
+      li {
+        margin-bottom: 0.25rem;
+        a {
+          background: #fff;
+          color: black;
+          font-size: 2rem;
+          line-height: 1.6rem;
+          img {
+            margin-right: 1.6rem;
+          }
+          &:hover {
+            color: var(--col-text-purple);
+          }
+          &.active_link {
+            background: #7217f4 !important;
+            color: #edd3fd;
+            &:hover {
+              color: #edd3fd;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content_right_side {
+    grid-gap: 1.5rem !important;
+    gap: 1.5rem !important;
+  }
+}

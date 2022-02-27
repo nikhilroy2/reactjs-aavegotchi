@@ -1,0 +1,52 @@
+@media (max-width: 767px) {
+  #PortalClosed .col_size_wrapper {
+    width: 100% !important;
+  }
+}
+
+#PortalClosed aside {
+  background: #000;
+}
+
+#PortalClosed aside .box_title {
+  color: #fff;
+}
+
+#PortalClosed aside img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#PortalClosed aside .aside_link_list li {
+  margin-bottom: 0.25rem;
+}
+
+#PortalClosed aside .aside_link_list li a {
+  background: #fff;
+  color: black;
+  font-size: 2rem;
+  line-height: 1.6rem;
+}
+
+#PortalClosed aside .aside_link_list li a img {
+  margin-right: 1.6rem;
+}
+
+#PortalClosed aside .aside_link_list li a:hover {
+  color: var(--col-text-purple);
+}
+
+#PortalClosed aside .aside_link_list li a.active_link {
+  background: #7217f4 !important;
+  color: #edd3fd;
+}
+
+#PortalClosed aside .aside_link_list li a.active_link:hover {
+  color: #edd3fd;
+}
+
+#PortalClosed .content_right_side {
+  grid-gap: 1.5rem !important;
+  gap: 1.5rem !important;
+}
+/*# sourceMappingURL=PortalClosed.css.map */
