@@ -39,8 +39,12 @@
   }
   .content_right_side {
     padding-left: 1.5rem;
+    .content_wrapper {
+      background: white;
+    }
   }
   #portalClosedContent {
+    background: white;
     .tabItemWrapper {
       background: white;
       border: 5px solid black;
@@ -99,8 +103,7 @@
         border-right: 7px solid black;
         & > li {
           border-bottom: solid 7px black;
-        padding: 1rem 3rem!important;
-
+          padding: 1rem 3rem !important;
         }
       }
       .col_header {

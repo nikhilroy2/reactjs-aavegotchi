@@ -49,6 +49,14 @@
   padding-left: 1.5rem;
 }
 
+#PortalClosed .content_right_side .content_wrapper {
+  background: white;
+}
+
+#PortalClosed #portalClosedContent {
+  background: white;
+}
+
 #PortalClosed #portalClosedContent .tabItemWrapper {
   background: white;
   border: 5px solid black;

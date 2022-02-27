@@ -180,4 +180,8 @@ button {
 h3 {
   font-size: 3rem;
 }
+
+.text_purple {
+  color: var(--col-text-purple);
+}
 /*# sourceMappingURL=App.css.map */
