@@ -11,7 +11,7 @@ function PortalItems(props) {
           <div className="w-75 content_right_side col_size_wrapper">
             <div className="content_wrapper">
               <div className="col_header">
-                <div className="d-flex align-items-center justify-content-between">
+                <div className="d-flex py-3 align-items-center justify-content-between">
                   <button
                     onClick={() => window.history.back()}
                     className="back_btn"
