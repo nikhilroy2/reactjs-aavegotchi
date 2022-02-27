@@ -2,17 +2,20 @@
   .content_wrapper {
     border: 7px solid black;
     padding: 1rem 3rem !important;
+    @media (max-width: 768px) {
+      padding: 1rem 1.8rem !important;
+    }
   }
   .col_header {
     font-size: 3.6rem;
     border-bottom: solid 2px var(--col-text);
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       font-size: 20px;
     }
     h3 {
       font-weight: bold;
       font-size: 3.6rem;
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         font-size: 20px;
       }
     }
