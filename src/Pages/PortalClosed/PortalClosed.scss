@@ -83,6 +83,7 @@
         @media (max-width: 767px) {
           width: 100%;
           border-bottom: 5px solid black;
+          border-right: none;
         }
       }
       li {
@@ -142,6 +143,9 @@
         & > li {
           border-bottom: solid 7px black;
           padding: 1rem 3rem !important;
+          @media (max-width: 768px) {
+            padding: 1rem 2rem !important;
+          }
         }
       }
       .col_header {

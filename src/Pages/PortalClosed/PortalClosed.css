@@ -107,6 +107,7 @@
   #PortalClosed #portalClosedContent .tabItemWrapper .result_list {
     width: 100%;
     border-bottom: 5px solid black;
+    border-right: none;
   }
 }
 
@@ -180,6 +181,12 @@
 #PortalClosed #portalClosedContent .tabItemContent .tabItemList > li {
   border-bottom: solid 7px black;
   padding: 1rem 3rem !important;
+}
+
+@media (max-width: 768px) {
+  #PortalClosed #portalClosedContent .tabItemContent .tabItemList > li {
+    padding: 1rem 2rem !important;
+  }
 }
 
 #PortalClosed #portalClosedContent .tabItemContent .col_header {
