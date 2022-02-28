@@ -1,11 +1,11 @@
 #MyGotChis {
-  border: solid 15px var(--theme-game-border) !important;
-  background: var(--theme-game-border);
+  border: solid 15px var(--theme-yellow) !important;
+  background: var(--theme-yellow);
   margin-bottom: 5rem;
 }
 
 #MyGotChis .content_header {
-  background: #04b7bc;
+  background: var(--theme-game-bg);
   padding: 3px 10px;
 }
 
@@ -37,7 +37,7 @@
 
 #MyGotChis .content_body {
   min-height: 82vh;
-  background: #04b7bc;
+  background: var(--theme-game-bg);
   text-align: center;
   font-size: 16px;
   color: #000;

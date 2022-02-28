@@ -191,7 +191,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6, p {
   color: var(--col-text) !important;
 }
 
@@ -216,6 +216,9 @@ h6 {
   --theme-side-menu-button: #200449;
   --col-pink-300: #7217f4 !important;
   --baazaar-item-bg: #12032e !important;
-  --col-text: #fff!important;
+  --col-text: #fff !important;
+  --theme-game-border: #47238d !important;
+  --theme-yellow: #47238d;
+  --theme-game-bg: #12032e!important;
 }
 /*# sourceMappingURL=App.css.map */
