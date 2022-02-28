@@ -1,9 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
+
+// .....................Pages...................
 import PortalClosed from "./Pages/PortalClosed/PortalClosed";
 import PortalItems from "./Pages/PortalItems/PortalItems";
-import { BrowserRouter, Switch, Route, Routes, Link } from "react-router-dom";
+import MyGotChis from "./Pages/MyGotChis/MyGotChis";
+// .....................Pages...................End
 
+import { BrowserRouter, Switch, Route, Routes, Link } from "react-router-dom";
 
 // Compnents. ...........
 
@@ -21,6 +25,8 @@ function App() {
               path="/portalitems"
               element={<PortalItems></PortalItems>}
             ></Route>
+
+            <Route path="/my_gotchis" element={<MyGotChis></MyGotChis>}></Route>
           </Routes>
         </div>
       </div>

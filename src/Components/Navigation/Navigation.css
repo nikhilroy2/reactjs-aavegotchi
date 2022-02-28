@@ -7,6 +7,10 @@
   border-left: solid 3px var(--dull-border);
 }
 
+.btn_toggle {
+  background: var(--theme-button-purple);
+}
+
 .bg_toggle_btn_wrapper {
   width: 50px;
   height: 24px;

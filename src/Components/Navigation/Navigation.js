@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Drawer, Button, ButtonToolbar } from "rsuite";
+import { Link } from "react-router-dom";
 import "rsuite/dist/rsuite.min.css";
 import "./Navigation.css";
 
 function Navigation(props) {
   const [openWithHeader, setOpenWithHeader] = React.useState(false);
   const [thumbToggle, setThumbToggle] = useState(false);
+
+  useEffect(() => {
+    let theme = thumbToggle ? "dark-theme" : "";
+    window.document.documentElement.setAttribute("data-theme", theme);
+  }, [thumbToggle]);
   const drawer_link_object = {
     object1: [
       {
@@ -16,7 +22,7 @@ function Navigation(props) {
       },
       {
         id: 2,
-        link: "#",
+        link: "/my_gotchis",
         name: "My GotChis",
         icon: require("../../Static/img/icon_img/aavegotchialpha.png"),
       },
@@ -71,8 +77,7 @@ function Navigation(props) {
       <div className="d-flex justify-content-end">
         <button
           onClick={() => setOpenWithHeader(true)}
-          className="btn_togglebtn p-1 my-2 btn"
-          style={{ background: "#006bb3" }}
+          className="btn_toggle btn p-1 px-3 my-2 btn"
         >
           <img
             style={{ width: "50px", height: "55px" }}
@@ -127,8 +132,12 @@ function Navigation(props) {
             <ul className="drawer_nav_list list-unstyled">
               {drawer_link_object.object1.map((v) => {
                 return (
-                  <li key={v.id} className="mb-3">
-                    <a href={v.link}>
+                  <li
+                    key={v.id}
+                    onClick={() => setOpenWithHeader(false)}
+                    className="mb-3"
+                  >
+                    <Link to={v.link}>
                       {" "}
                       <img
                         className="me-3"
@@ -137,7 +146,7 @@ function Navigation(props) {
                         style={{ width: "30px", height: "30px" }}
                       />{" "}
                       {v.name}{" "}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
@@ -148,7 +157,7 @@ function Navigation(props) {
               {drawer_link_object.object2.map((v) => {
                 return (
                   <li key={v.id} className="mb-3">
-                    <a href={v.link}>
+                    <Link to={v.link}>
                       {" "}
                       <img
                         className="me-3"
@@ -157,7 +166,7 @@ function Navigation(props) {
                         style={{ width: "30px", height: "30px" }}
                       />{" "}
                       {v.name}{" "}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
@@ -165,7 +174,10 @@ function Navigation(props) {
 
             <div className="settings_action">
               <div className="drawer_nav_list d-flex w-100 h-100">
-                <a href="#" className="text-center align-self-end w-100  justify-content-center">
+                <a
+                  href="#"
+                  className="text-center align-self-end w-100  justify-content-center"
+                >
                   Settings
                   <img
                     className="ml-3"
