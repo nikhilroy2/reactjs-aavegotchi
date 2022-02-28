@@ -56,24 +56,25 @@ function Mint(props) {
 
                   <div className="col user_details_col p-3 p-md-4 px-md-5">
                     <div className="user_details_col_title">
-                      <h3 className="border_all_box px-4 mb-3 text-uppercase py-2">
-                        Lorem ipsum dolor sit amet.
-                      </h3>
+                      <form action="">
+                        <input
+                          type="text"
+                          className="form-control border_all_box px-4 mb-3 text-uppercase py-2"
+                          placeholder="Title..."
+                        />
 
-                      <p className="border_all_box px-4 mb-3">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Libero sequi, dolore, molestiae amet totam praesentium
-                        quo quos nemo, beatae voluptatibus sit aut modi commodi
-                        impedit ipsum delectus excepturi veritatis. Odio iure
-                        provident suscipit ea consequuntur tempore iusto commodi
-                        fuga! Aliquam velit dolorum ipsam illo alias facilis
-                        error magni vero debitis. Lorem ipsum, dolor sit amet
-                        consectetur adipisicing elit. Totam, nisi?
-                      </p>
+                        <textarea
+                          name=""
+                          id=""
+                          rows="6"
+                          className="form-control border_all_box px-4 mb-3"
+                          placeholder="Description..."
+                        ></textarea>
 
-                      <button className="border_all_box btn w-100 btn-secondary">
-                        Create a pack
-                      </button>
+                        <button className="border_all_box btn w-100 btn-secondary">
+                          Create a pack
+                        </button>
+                      </form>
                     </div>
                   </div>
                 </div>

@@ -210,6 +210,9 @@ h6,p {
   border: 3px solid #000;
   font-size: 20px;
 }
+::placeholder{
+ font-size: 20px;
+}
 
 
 ////////////////..................................black theme...............
@@ -227,6 +230,10 @@ h6,p {
     --theme-game-border: #47238d !important;
     --theme-yellow: #47238d;
     --theme-game-bg: #12032e!important;
+  }
+  .form-control{
+    background: #000;
+    color: white;
   }
 }
 ////////////////..................................black theme...............End

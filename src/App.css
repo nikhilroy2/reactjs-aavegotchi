@@ -211,6 +211,22 @@ h6, p {
   font-size: 20px;
 }
 
+::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+:-ms-input-placeholder {
+  font-size: 20px;
+}
+
+::-ms-input-placeholder {
+  font-size: 20px;
+}
+
+::placeholder {
+  font-size: 20px;
+}
+
 [data-theme="dark-theme"] body {
   background-blend-mode: overlay;
   background: #080315 !important;
@@ -225,5 +241,10 @@ h6, p {
   --theme-game-border: #47238d !important;
   --theme-yellow: #47238d;
   --theme-game-bg: #12032e!important;
+}
+
+[data-theme="dark-theme"] .form-control {
+  background: #000;
+  color: white;
 }
 /*# sourceMappingURL=App.css.map */
