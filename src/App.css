@@ -129,9 +129,9 @@ html {
 
 body {
   color: #000;
-  background: var(--theme-body-bg);
+  background: var(--theme-body-bg) !important;
   background-attachment: fixed;
-  background-image: url("./Static/img/ghostbg.svg"), none;
+  background-image: url("./Static/img/ghostbg.svg"), none !important;
   background-position: 0 0;
   background-repeat: repeat;
   background-size: 300px;
@@ -173,8 +173,13 @@ body {
 }
 
 a,
-button {
+button,
+.active_cursor {
   cursor: url("./Static/img/link_cursor.png") 14 0, pointer !important;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 h3 {
