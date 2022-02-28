@@ -128,7 +128,7 @@ html {
 }
 
 body {
-  color: #000;
+  color: var(--col-text) !important;
   background: var(--theme-body-bg) !important;
   background-attachment: fixed !important;
   background-image: url("./Static/img/ghostbg.svg"), none !important;
@@ -145,7 +145,7 @@ body {
   overflow: visible;
   padding: 0;
   width: 100%;
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 @media (min-width: 768px) {
@@ -204,6 +204,11 @@ h6, p {
   color: white;
   border: 3px solid #000;
   font-size: 16px;
+}
+
+.border_all_box {
+  border: 3px solid #000;
+  font-size: 20px;
 }
 
 [data-theme="dark-theme"] body {

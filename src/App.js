@@ -5,6 +5,7 @@ import "./App.css";
 import PortalClosed from "./Pages/PortalClosed/PortalClosed";
 import PortalItems from "./Pages/PortalItems/PortalItems";
 import MyGotChis from "./Pages/MyGotChis/MyGotChis";
+import Mint from "./Pages/Mint/Mint";
 // .....................Pages...................End
 
 import { BrowserRouter, Switch, Route, Routes, Link } from "react-router-dom";
@@ -27,6 +28,7 @@ function App() {
             ></Route>
 
             <Route path="/my_gotchis" element={<MyGotChis></MyGotChis>}></Route>
+            <Route path="/mint" element={<Mint></Mint>}></Route>
           </Routes>
         </div>
       </div>

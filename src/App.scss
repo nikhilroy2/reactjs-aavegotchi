@@ -123,7 +123,7 @@ html {
   font-size: 10px;
 }
 body {
-  color: #000;
+  color: var(--col-text)!important;
 
   background: var(--theme-body-bg) !important;
   background-attachment: fixed !important;
@@ -140,7 +140,7 @@ body {
   overflow: visible;
   padding: 0;
   width: 100%;
-  font-size: 16px;
+  font-size: 16px!important;
 }
 
 /// ...........................Global Settings. .......................End
@@ -206,6 +206,11 @@ h6,p {
   border: 3px solid #000;
   font-size: 16px;
 }
+.border_all_box{
+  border: 3px solid #000;
+  font-size: 20px;
+}
+
 
 ////////////////..................................black theme...............
 [data-theme="dark-theme"] {

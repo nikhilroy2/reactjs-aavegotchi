@@ -75,6 +75,29 @@ function Navigation(props) {
   return (
     <div id="Navigation">
       <div className="d-flex justify-content-end">
+        <Link
+          to="/my_gotchis"
+          className="d-flex align-items-center btn_toggle btn p-2 px-3 me-2 my-2 btn text-white"
+          style={{ fontSize: "20px" }}
+        >
+          My GotChis
+        </Link>
+
+        <Link
+          to="/mint"
+          className="d-flex align-items-center btn_toggle btn p-2 px-3 me-2 my-2 btn text-white"
+          style={{ fontSize: "20px" }}
+        >
+          Mint
+        </Link>
+
+        <Link
+          to="/portalitems"
+          className="d-flex align-items-center btn_toggle btn p-2 px-3 me-2 my-2 btn text-white"
+          style={{ fontSize: "20px" }}
+        >
+          Portal
+        </Link>
         <button
           onClick={() => setOpenWithHeader(true)}
           className="btn_toggle btn p-1 px-3 my-2 btn"
